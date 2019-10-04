@@ -1,0 +1,57 @@
+3Ea--
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/BronHarr/assignment2-1.git
+   f4975e5..94e0fa9  master -> master
+
+b--
+8 commits so far
+command used:
+$ git rev-list --all --count
+
+c--
+based on the last commit, it was last modified wednesday sep 25 at 6:30pm
+command used:
+$ git log -1 .gitignore 
+
+d--
+branches are used to record different iterations for a piece of software, and allows quick access to those old iterations.
+another reason is to create a different version of the software, or rather an iteration that handles implementation differently. 
+branching this different version is a good way to organize repository and not lose track of different files.
+
+e--
+git status tracks the current status of the entire repository against the last commit. 
+git log does the same thing only with a single file against the last commit that included that file
+
+f--
+the command would be:
+$ git log --all Vehicle.h
+
+g--
+the command would be:
+$ git log --all --grep='file'
+
+h--
+A class that that has the verbatim functionality of another class has 'inherited' that class's functionality, or is based off of it.
+can also be described via a "is a" relationship. an 'apple' class would inherit the public and private data of the 'fruit' class.
+Polymorphism is when a class can have an "is a" relationship with more than one parent, or has inherited from two different classes.
+because of this, it can effectively function as any class it has inherited from. through Encapsulation, certain data and processes
+can be hidden from outside parties in order to simplify the interface of the class. 
+
+i--
+The integration manager workflow works such that developers each get two repositories that are based off one main or "blessed" repository.
+A private one, to make changes in, and a public one to do pushing from. an integrations manager will review each push made by the developers and
+decide which ones will be pushed into the blessed repository. Lieutenants and Dictator is similar, only instead of one level of checking
+done by an integration manager, there are multiple "lieutenants" that try to catch any problem before they are pushed to the "dictator" 
+who is the only person allowed to make final pushes into the blessed repository.
+
+j--
+A team of 100 developers would benefit much more from lt. and dictators workflow as there are multiple points of failure, allowing
+volatile code to be salvaged and fixed before ruining the rest of the program. in a centralized system it would only take one person's 
+mistake to potentially ruin an entire repository and freeze development on a project until the bug was fixed.
